@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity3">
@@ -14,38 +15,66 @@
 
         <ListView
             android:id="@+id/listViewResultados"
-            android:layout_width="356dp"
-            android:layout_height="402dp"
+            android:layout_width="338dp"
+            android:layout_height="347dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.695"
+            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.053" />
+            app:layout_constraintVertical_bias="0.498" />
 
         <LinearLayout
-            android:layout_width="286dp"
-            android:layout_height="134dp"
+            android:layout_width="356dp"
+            android:layout_height="97dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.869">
+            app:layout_constraintVertical_bias="0.988">
 
             <Button
                 android:id="@+id/btnVolver"
-                android:layout_width="141dp"
-                android:layout_height="wrap_content"
+                android:layout_width="182dp"
+                android:layout_height="58dp"
+                android:backgroundTint="@color/sandia"
                 android:text="Volver" />
 
             <Button
                 android:id="@+id/btnSalir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="171dp"
+                android:layout_height="59dp"
                 android:layout_weight="1"
+                android:backgroundTint="@color/sandia"
                 android:text="Salir" />
         </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="379dp"
+            android:layout_height="137dp"
+            android:background="@color/sandia"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="349dp"
+                android:layout_height="76dp"
+                android:background="@color/sandia"
+                android:text="Resultado"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

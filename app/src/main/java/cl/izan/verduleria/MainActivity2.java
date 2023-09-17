@@ -14,6 +14,7 @@ public class MainActivity2 extends AppCompatActivity {
     private EditText editTextNHec;
     private Button btnCalcular;
 
+    private Button btnLimpiar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,15 @@ public class MainActivity2 extends AppCompatActivity {
         editTextVer = findViewById(R.id.editTextVer);
         editTextNHec = findViewById(R.id.editTextHec);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btnLimpiar = findViewById(R.id.btnLimpiar);
 
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextVer.setText("");
+                editTextNHec.setText("");
+            }
+        });
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,4 +58,5 @@ public class MainActivity2 extends AppCompatActivity {
             // Manejar error de formato
         }
     }
+
 }

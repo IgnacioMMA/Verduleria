@@ -4,28 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity2">
 
-    <EditText
-        android:id="@+id/editTextVer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Verduras"
-        android:inputType="number" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="387dp"
+        android:layout_height="709dp">
 
-    <EditText
-        android:id="@+id/editTextHec"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Hectáreas"
-        android:inputType="number" />
+        <EditText
+            android:id="@+id/editTextVer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:hint="Ingrese Verduras"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
 
-    <Button
-        android:id="@+id/btnCalcular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calcular" />
+        <EditText
+            android:id="@+id/editTextHec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:hint="Ingrese Hectareas"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.391" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="152dp"
+            android:layout_height="62dp"
+            android:backgroundTint="@color/sandia"
+            android:text="Calcular"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.773" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="381dp"
+            android:layout_height="78dp"
+            android:background="@color/sandia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.042">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculemos!!!"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="152dp"
+            android:layout_height="62dp"
+            android:backgroundTint="@color/sandia"
+            android:text="Limpiar"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintStart_toEndOf="@+id/btnCalcular"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHec"
+            app:layout_constraintVertical_bias="0.57" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
